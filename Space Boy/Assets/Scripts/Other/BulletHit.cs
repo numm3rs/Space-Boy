@@ -24,7 +24,7 @@ public class BulletHit : MonoBehaviour
     {
         if (renderer.isVisible == false)
         {
-            Destroy(gameObject);
+            
         }
     }
 }
