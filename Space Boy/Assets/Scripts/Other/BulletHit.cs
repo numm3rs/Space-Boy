@@ -8,7 +8,7 @@ public class BulletHit : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Enemy"))
+        if ((collision.transform.CompareTag("Enemy") && transform.tag == "PlayerBullet") || (collision.transform.CompareTag("Player") && transform.tag == "EnemyBullet"))
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
@@ -24,7 +24,7 @@ public class BulletHit : MonoBehaviour
     {
         if (renderer.isVisible == false)
         {
-            
+            Destroy(gameObject);
         }
     }
 }
